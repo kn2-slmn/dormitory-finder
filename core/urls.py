@@ -26,6 +26,8 @@ urlpatterns = [
 
     path('dorms/', include('dorms.urls')),
 
+    path('api-auth/', include('rest_framework.urls')),
+
     # JWT Token and Refresh
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
